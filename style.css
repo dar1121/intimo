@@ -1,0 +1,197 @@
+/**********DEFINITIONS**********/
+
+	@font-face {
+		  font-family: "Bagnard";
+		  src: url('Assets/style/Bagnard.otf');
+		  font-weight: normal;
+		  font-style: normal;
+		}
+
+		@font-face {
+		  font-family: "GT-America";
+		  src: url('Assets/style/GT-America-Standard-Regular.woff2');
+		  font-weight: normal;
+		  font-style: normal;
+		}
+
+/*********LAYOUT*********/
+
+body {
+		color: black ;
+		font-family: "GT-America";
+		background: rgba(0,0,0);
+	background: linear-gradient(90deg, rgba(80,83,210,1) 0%, rgba(233,196,86,1) 68%, rgba(124,124,124,1) 100%);
+
+
+}
+
+#container {
+	margin: auto;
+	margin-top:100px;
+	width: 80%;
+	padding: 10px;
+	margin-bottom: 150px;
+}
+
+}
+
+#header {
+
+}
+
+#radio {
+	margin: auto;
+	width:40%;
+	height:200px;
+	margin-top: 150px;
+	margin-bottom: 70px;
+
+}
+
+.livestream {
+	height:100px;
+	border: 2px solid white;
+}
+
+.play {
+  float: left;
+  width: 30%;
+}
+
+.controls {
+	float: right;
+	width: 70%;
+	padding:0;
+}
+
+
+
+#content {   
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: stretch;
+	align-content: stretch;
+
+}
+
+
+#item {
+	height: 210px;
+	width: 25%;
+	padding: 10px;
+	margin: 3%;
+	background-color: rgba(255,255,255,0.2);
+
+
+
+}
+
+
+.recorder {
+	border: 2px dashed white;
+}
+
+#footer {
+
+}
+
+
+
+/********* TYPOGRAPHY *********/
+
+#radio h1{
+	color: white;
+	font-family:"Bagnard";
+	text-align: left;
+	font-size: 60px;
+	margin-bottom:0px;
+
+
+}
+
+
+h2 {
+	width: 100%;
+	height: 35px;
+	font-size: 20px;
+	line-height: 35px;
+	margin:0px;
+}
+
+
+/********* INPUT / BUTTONS  *********/
+ 
+button {
+	 -webkit-appearance: none;
+}
+
+button:disabled {
+  display:none;
+}
+
+ .play button {
+	font-size: 70px;
+	background-color: rgba(255,255,255,0.3);
+	color: white;
+	border: none;
+	text-align: center;
+	height:100px;
+	width: 100px;
+}
+
+.play button:hover, button:focus {
+	background-color: rgba(255,255,255,0.7);
+}
+
+.controls button{
+	float: left;
+	height: 45px;
+	width:45px;
+	border: 0;
+	background-color: Transparent;
+    background-repeat:no-repeat;
+	background-image: url('Assets/style/volume.png');
+	background-size: 45px auto;
+	margin:0px;
+	padding:0;
+
+}
+
+.controls button:hover, button:focus{
+	background-image: url('Assets/style/mute.png');
+}
+
+.slider {
+  -webkit-appearance: none;
+  margin-top:15px;
+  width: 70%;
+  height: 15px;
+  background: rgba(255,255,255,0.4);
+  outline: none;
+  margin-left: 10px;
+
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%; 
+  background: rgba(255,255,255,1);
+
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: rgba(255,255,255,1);
+
+}
+
+.recorder button {
+	
+
+}

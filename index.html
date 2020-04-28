@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="style.css" rel="stylesheet" type="text/css">
+	<title>Intimo.</title>
+</head>
+<body>
+<div id="container">
+	<div id="header"> 
+	
+		<div id="radio">
+		<h1> Intimo.</h1>
+		<div class="livestream">
+		    <div class="play">
+		      <button id = "startButton" onclick = "userStartAudio()"> ► </button>
+		  	</div>
+			<div class="controls">
+				 <p style="margin:0px; line-height: 45px;font-size: 18px;"> 
+				 	<strong>Now Playing:</strong> <em> Audio Livestream </em>
+				 </p>
+
+		      <button id = "muteButton" onclick = "muteAudio()"></button>
+		       <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+<!-- 		      <button id = "unMuteButton" onclick = "unMuteAudio()"> </button>
+ -->		      <audio src = "https://streaming.radio.co/s9306bc0d0/listen" id = "player" autoplay preload></audio>
+			 </div>
+			</div>
+		</div>
+
+	</div>
+
+	<div id="content">
+		<div id="item" class="recorder"> 
+			<h2> + Add to Live Stream </h2> 
+			<p style="text-align:center;margin-top:38px"> Click to start recording. </p>
+		 <button id="recordButton" disabled  style="
+		 				margin-top:18px;
+						margin-left:42%;
+						height: 40px;
+						width: 40px;
+						background-image: url('Assets/style/record.png');
+						background-size: 40px auto;
+						background-color: Transparent;
+						background-repeat: no-repeat;
+						border: 0;"></button>
+
+  		 <button id="pauseButton"  style="
+				  		 margin-top: 18px;
+				  		 margin-left: 23%;
+				  		 height: 40px;
+				  		 width: 40px;
+				  		 background-image: url('Assets/style/pause.png');
+				  		 background-color: Transparent;
+				  		 background-size: 40px auto;
+				  		 background-repeat: no-repeat;
+				  		 border:0;"></button>
+
+  		 <button id="stopButton"  style="
+  		 				margin-top: 18px;
+				  		 margin-left: 10%;
+				  		 height: 40px;
+				  		 width: 80px;
+				  		 background-image: url('Assets/style/stop.png');
+				  		 background-color: Transparent;
+				  		 background-size: auto 40px;
+				  		 background-repeat: no-repeat;
+				  		 border:0;" ></button>
+
+		<button id="playButton" disabled>
+		</button>
+
+		<button id="saveButton" disabled>
+		</button>
+
+		<button id="xButton" disabled>
+		</button>
+		</div>
+		<div id="item"> 
+			Item
+		</div>
+		<div id="item"> 
+			Item
+		</div>
+
+		<div id="item"> 
+			Item
+		</div>
+
+		<div id="item"> 
+			Item
+		</div>
+
+				<div id="item"> 
+			Item
+		</div>
+	</div>
+
+	
+</div>
+
+<div id="footer">
+	</div>
+
+</body>
+</html>
