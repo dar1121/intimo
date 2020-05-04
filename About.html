@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="style.css" rel="stylesheet" type="text/css">
+	<title>Intimo</title>
+</head>
+<body style = "background-image: url('Assets/Imgs/bg-StandIn.png')">
+    
+	<!-- <div id = "blur"></div> -->
+
+<!-- Heading -->
+    
+    <div id = "heading">
+
+         <div id = "recordMessage">
+            <button id = "recordButton"><a style = "font-size: 1em" href = "index.html">+ Deliver a Message</a></button>
+            <!-- <p id = "recordingStatus"> Click to start recording</p> -->
+            <!-- <div id = "recordButtonDiv"><button id = "startRecordButton" onclick = "startRecording()"><img src = "Assets/Imgs/record-symbol.png"></button></div> -->
+            <!-- <button id = "pauseRecordButton"> ⎮⎮ </button> -->
+          </div>
+
+          <h1><a id = "title" href = "index.html">Intimo</a></h1>
+
+          <div id = "liveStreamControls">
+            <button id = "startButton" onclick = "startAudio()"> Start Radio </button>
+            <button id = "muteButton" onclick = "muteAudio()">Sound On</button>
+            <button id = "unMuteButton" onclick = "unMuteAudio()"> <strike>Sound On</strike></button>
+          </div>
+      </div>
+
+<!-- LIVESTREAM SOURCE -->
+
+    <audio src = "https://streaming.radio.co/s9306bc0d0/listen" id = "player" autoplay preload></audio> 
+
+<!-- WRITTEN CONTENT -->
+
+    <div id = "aboutParagraph">
+        <h2> About </h2>
+            <p> This isn’t just an audio recording archive. It’s more than that. 
+                We’re making an online radio experience that employs user-generated spoken word sound bites 
+                to <b>help people connect</b>. Private listening on headphones is a way to <b>experience intimacy during 
+                mandated social distancing</b>. Our app gives users a way to share snippets of audio(with loved ones) 
+                while socially <--- 6 ft ---> distant.</p>
+
+        <h2> Our Process </h2>
+            <p> Our documentation of making this project + link to resources add images and sketches! and problems we encountered...</p>
+        </div>
+
+<!-- LOWER NAV BAR -->
+
+    <div id = "lowerNavBar">
+        <a href = "index.html#ArchiveSection" style = "margin-right: 25%; margin-left: 2%">Archive</a>
+        <a href = "About.html" style = "margin: 0 15%; ">About</a>
+        <a href = "instructions.html" style = "margin-left:20%">Instructions</a>
+    </div>      
+    
+    <!-- <script src = "js/newBGSketch.js"></script> -->
+    <script src="js/landingJS.js">
+    </script>
+</body>
+</html>

@@ -1,105 +1,213 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<link href="style.css" rel="stylesheet" type="text/css">
-	<title>Intimo.</title>
-</head>
-<body>
-<div id="container">
-	<div id="header"> 
-	
-		<div id="radio">
-		<h1> Intimo.</h1>
-		<div class="livestream">
-		    <div class="play">
-		      <button id = "startButton" onclick = "userStartAudio()"> ► </button>
-		  	</div>
-			<div class="controls">
-				 <p style="margin:0px; line-height: 45px;font-size: 18px;"> 
-				 	<strong>Now Playing:</strong> <em> Audio Livestream </em>
-				 </p>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+  </head>
+  <body>
 
-		      <button id = "muteButton" onclick = "muteAudio()"></button>
-		       <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-<!-- 		      <button id = "unMuteButton" onclick = "unMuteAudio()"> </button>
- -->		      <audio src = "https://streaming.radio.co/s9306bc0d0/listen" id = "player" autoplay preload></audio>
-			 </div>
-			</div>
-		</div>
+<!-- BACKGROUND BLUR EFFECT -->
 
-	</div>
+  <div id = "blur"></div>
 
-	<div id="content">
-		<div id="item" class="recorder"> 
-			<h2> + Add to Live Stream </h2> 
-			<p style="text-align:center;margin-top:38px"> Click to start recording. </p>
-		 <button id="recordButton" disabled  style="
-		 				margin-top:18px;
-						margin-left:42%;
-						height: 40px;
-						width: 40px;
-						background-image: url('Assets/style/record.png');
-						background-size: 40px auto;
-						background-color: Transparent;
-						background-repeat: no-repeat;
-						border: 0;"></button>
+<!-- Heading -->
 
-  		 <button id="pauseButton"  style="
-				  		 margin-top: 18px;
-				  		 margin-left: 23%;
-				  		 height: 40px;
-				  		 width: 40px;
-				  		 background-image: url('Assets/style/pause.png');
-				  		 background-color: Transparent;
-				  		 background-size: 40px auto;
-				  		 background-repeat: no-repeat;
-				  		 border:0;"></button>
+<div id = "landingPageSection">
 
-  		 <button id="stopButton"  style="
-  		 				margin-top: 18px;
-				  		 margin-left: 10%;
-				  		 height: 40px;
-				  		 width: 80px;
-				  		 background-image: url('Assets/style/stop.png');
-				  		 background-color: Transparent;
-				  		 background-size: auto 40px;
-				  		 background-repeat: no-repeat;
-				  		 border:0;" ></button>
+    <div id = "heading">
 
-		<button id="playButton" disabled>
-		</button>
+          <div id = "recordMessage">
+            <button id="expand" onclick = "expand()"> + Add to Live Stream  </button>
+      <button id="restartButton"  style="
+               position:relative;
+               float:right;
+               height: 30px;
+               width: 30px;
+              background-image: url('Assets/Imgs/restart.png');
+               background-repeat: no-repeat;
+               border:0;"> 
+    </button>
+      <p id="formats"> Click to start recording. </p>
+     <button id="recordButton"   style="
+            margin-top:18px;
+            margin-left:42%;
+            background-image: url('Assets/Imgs/record-symbol.png');
+            height:31px;
+            width:20px;
+            background-color: Transparent;
+            background-repeat: no-repeat;
+            border: 0;"></button>
 
-		<button id="saveButton" disabled>
-		</button>
+       <button id="pauseButton"   style="
+               float:left;
+               height: 30px;
+               width: 30px;
+               background-image: url('Assets/Imgs/pause.png');
+               background-color: Transparent;
+               background-repeat: no-repeat;
+               border:0;"></button>
 
-		<button id="xButton" disabled>
-		</button>
-		</div>
-		<div id="item"> 
-			Item
-		</div>
-		<div id="item"> 
-			Item
-		</div>
+       <button id="stopButton"   style="
+               float:right;
+               height: 30px;
+               width: 30px;
+               background-image: url('Assets/Imgs/stop.png');
+               background-color: Transparent;
+               background-repeat: no-repeat;
+               border:0;" > </button>
 
-		<div id="item"> 
-			Item
-		</div>
 
-		<div id="item"> 
-			Item
-		</div>
+    <button id="uploadButton"  style="
+               margin-top:18px;
+               margin-left:42%;
+               height: 30px;
+               width: 30px;
+               background-image: url('Assets/Imgs/upload.png');
+               background-repeat: no-repeat;
+               border:0;"> 
+    </button>
 
-				<div id="item"> 
-			Item
-		</div>
-	</div>
+    
 
-	
-</div>
+    
+        <ol id="recordingsList"></ol>
 
-<div id="footer">
-	</div>
 
-</body>
+    <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
+      <script src="app.js"></script>
+
+           <!--  <button id = "recordButton" onclick = "expand()">+ Deliver a Message </button>
+            <p id = "recordingStatus"> Click to start recording</p>
+            <div id = "recordButtonDiv"><button id = "startRecordButton" onclick = "startRecording()"><img src = "Assets/Imgs/record-symbol.png"></button></div>
+            <button id = "pauseRecordButton"> ⎮⎮ </button> --> 
+          </div>
+
+          <h1>Intimo</h1>
+
+          <div id = "liveStreamControls">
+            <button id = "startButton" onclick = "startAudio()"> Start Radio </button>
+            <button id = "muteButton" onclick = "muteAudio()">Sound On</button>
+            <button id = "unMuteButton" onclick = "unMuteAudio()"> <strike>Sound On</strike></button>
+          </div>
+
+    </div>
+
+
+<!-- LIVESTREAM SOURCE -->
+
+    <audio src = "https://stream.radio.co/s3de135d1c/listen" id = "player" autoplay preload></audio>
+
+
+<!-- ZIPCODE INPUT -->
+
+   <div id = "zipcodeSearchBox">
+    <input id = "text-box" type='text' value="Enter a zipcode"></input>
+    <button id = "submit">Go</button> 
+  </div>
+
+
+<!-- LOWER NAV BAR -->
+
+  <div id = "lowerNavBar">
+    <a href = "#ArchiveSection" style = "margin-right: 20%; margin-left: 2%">Archive</a>
+    <a href = "About.html" style = "margin: 0 15%; ">About</a>
+    <a href = "instructions.html" style = "margin-left:20%">Instructions</a>
+  </div>
+
+
+<!-- ARCHIVE -->
+    
+<div id = "ArchiveSection">  
+
+
+      <div id = "archive">
+        <div id="archive-file">
+          <h4> Track Title </h4>
+          <h5> -:22 </h5>
+          <h5> 21218 </h5>
+          <button onclick = "playFile1()">►</button>
+          <button onclick = "pauseFile1()">⎮⎮</button>
+          <hr id = "grid-id">
+          <audio src = "Assets/Anthony_1.mp3" id = "file1" preload>
+        </div>
+
+        <div id="archive-file">
+          <h4> Track Title </h4>
+          <h5> -:22 </h5>
+          <h5> 21218 </h5>
+          <button onclick = "playFile2()">►</button>
+          <button onclick = "pauseFile2()">⎮⎮</button>
+          <hr id = "grid-id">
+          <audio src = "Assets/Imagine_1.mp3" id = "file2" preload>
+        </div>
+
+        <div id="archive-file" style = "border: none;">
+          <h4> Track Title </h4>
+          <h5> -:22 </h5>
+          <h5> 21218 </h5>
+          <button onclick = "playFile3()">►</button>
+          <button onclick = "pauseFile3()">⎮⎮</button>
+          <hr id = "grid-id">
+          <audio src = "Assets/January_1.mp3" id = "file3" preload>
+        </div>
+
+        <div id="archive-file">
+          <h4> Track Title </h4>
+          <h5> -:22 </h5>
+          <h5> 21218 </h5>
+          <button onclick = "playFile4()">►</button>
+          <button onclick = "pauseFile4()">⎮⎮</button>
+          <hr id = "grid-id">
+          <audio src = "Assets/Madonna_1.mp3" id = "file4" preload>
+        </div>
+
+        <div id="archive-file">
+          <h4> Track Title </h4>
+          <h5> -:22 </h5>
+          <h5> 21218 </h5>
+          <button onclick = "playFile5()">►</button>
+          <button onclick = "pauseFile5()">⎮⎮</button>
+          <hr id = "grid-id">
+          <audio src = "Assets/nostalgic-tones.m4a" id = "file5" preload>
+        </div>
+
+        <div id="archive-file" style = "border: none;">
+          <h4> Track Title </h4>
+          <h5> -:22 </h5>
+          <h5> 21218 </h5>
+          <button onclick = "playFile6()">►</button>
+          <button onclick = "pauseFile6()">⎮⎮</button>
+          <hr id = "grid-id">
+          <audio src = "Assets/Sam_1.mp3" id = "file6" preload>
+        </div>
+
+        <div id="archive-file">
+          <h4> Track Title </h4>
+          <h5> -:22 </h5>
+          <h5> 21218 </h5>
+          <button onclick = "playFile7()">►</button>
+          <button onclick = "pauseFile7()">⎮⎮</button>
+          <hr id = "grid-id">
+          <audio src = "Assets/Steve_1.mp3" id = "file7" preload>
+        </div>
+
+        <div id="archive-file">
+          <h4> Track Title </h4>
+          <h5> -:22 </h5>
+          <h5> 21218 </h5>
+          <button onclick = "playFile8()">►</button>
+          <button onclick = "pauseFile8()">⎮⎮</button>
+          <hr id = "grid-id">
+          <audio src = "Assets/Toast_1.mp3" id = "file8" preload>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- <script src="js/sketch2.js"></script> -->
+    <script src = "js/newBGSketch.js"></script>
+    <script src = "js/landingJS.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/addons/p5.sound.min.js"></script>
+  </body>
 </html>

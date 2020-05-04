@@ -1,0 +1,47 @@
+body {
+
+	font-family: 'Avenir Next';
+	text-align:center;
+}
+
+button {
+	color: black;
+	background-color: #a1080800;
+	font-size: 25px;
+	border-color: black;
+	border-width: thin;
+	padding: 2% 4%;
+	margin-top: 40%;
+	border-radius: 10px;
+}
+
+button:hover {
+	/*background-color: #a10808;*/
+	border-color: black;
+	/*border-width: medium;*/
+	box-shadow: -3px 3px 5px black;
+
+}
+
+button:disabled {
+  color: grey;
+  border-color: grey;
+}
+
+/* #saveButton {
+  	color: black;
+	background-color: #a1080800;
+	font-size: 25px;
+	border-color: black;
+	border-width: thin;
+	padding: 2% 4%;
+	margin-top: 50%;
+	border-radius: 10px;
+} */
+
+audio {
+  margin-top: 20%;
+
+canvas {
+  display: block;
+}

@@ -1,197 +1,223 @@
-/**********DEFINITIONS**********/
+@font-face {
+  font-family: "GT-Sectra-Fine-Trial-Regular";
+  src: url('GT-Sectra-Fine-Trial-Regular.otf');
+  font-weight: normal;
+  font-style: normal;
+}
 
-	@font-face {
-		  font-family: "Bagnard";
-		  src: url('Assets/style/Bagnard.otf');
-		  font-weight: normal;
-		  font-style: normal;
-		}
-
-		@font-face {
-		  font-family: "GT-America";
-		  src: url('Assets/style/GT-America-Standard-Regular.woff2');
-		  font-weight: normal;
-		  font-style: normal;
-		}
-
-/*********LAYOUT*********/
+html {
+	color: black;
+	scroll-behavior: smooth;
+}
 
 body {
-		color: black ;
-		font-family: "GT-America";
-		background: rgba(0,0,0);
-	background: linear-gradient(90deg, rgba(80,83,210,1) 0%, rgba(233,196,86,1) 68%, rgba(124,124,124,1) 100%);
-
-
+	font-family: "Arial";
+	background: rgba(255);
+	color: black;
+	margin: 0;
 }
 
-#container {
-	margin: auto;
-	margin-top:100px;
-	width: 80%;
-	padding: 10px;
-	margin-bottom: 150px;
+h1 {
+	font-size: 78px;
+	margin-top: 5%;
+	/*margin-bottom: 2%;*/
+	margin-left: 40%;
+	font-family: "GT-Sectra-Fine-Trial-Regular";
+	/*border: 2px dashed black;*/
 }
 
+h4 {
+	margin: 0;
+	font-size: 28px;
+	font-family: "GT-Sectra-Fine-Trial-Regular";
 }
 
-#header {
-
+h5 {
+	font-size: 18px;
+	margin: 2%;
 }
 
-#radio {
-	margin: auto;
-	width:40%;
-	height:200px;
-	margin-top: 150px;
-	margin-bottom: 70px;
-
+a {
+	text-decoration: none;
+	color: #000000;
+	font-size: 1.5em;
+	text-align: center;
+	font-family: "Arial"
 }
 
-.livestream {
-	height:100px;
-	border: 2px solid white;
+a:hover {
+	filter: blur(2px);
 }
 
-.play {
-  float: left;
-  width: 30%;
-}
-
-.controls {
-	float: right;
-	width: 70%;
-	padding:0;
-}
-
-
-
-#content {   
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	align-items: stretch;
-	align-content: stretch;
-
-}
-
-
-#item {
-	height: 210px;
-	width: 25%;
-	padding: 10px;
-	margin: 3%;
-	background-color: rgba(255,255,255,0.2);
-
-
-
-}
-
-
-.recorder {
-	border: 2px dashed white;
-}
-
-#footer {
-
-}
-
-
-
-/********* TYPOGRAPHY *********/
-
-#radio h1{
-	color: white;
-	font-family:"Bagnard";
-	text-align: left;
-	font-size: 60px;
-	margin-bottom:0px;
-
-
-}
-
-
-h2 {
-	width: 100%;
-	height: 35px;
-	font-size: 20px;
-	line-height: 35px;
-	margin:0px;
-}
-
-
-/********* INPUT / BUTTONS  *********/
- 
 button {
-	 -webkit-appearance: none;
+	font-size: 24px;
+	background-color: #ffffff00;
+	border: none;
+	margin-top: 0;
+	text-align: center;
+	color: black;
 }
 
 button:disabled {
   display:none;
 }
 
- .play button {
-	font-size: 70px;
-	background-color: rgba(255,255,255,0.3);
-	color: white;
-	border: none;
-	text-align: center;
-	height:100px;
-	width: 100px;
+button:hover {
+	filter: blur(2px);
 }
 
-.play button:hover, button:focus {
-	background-color: rgba(255,255,255,0.7);
+#landingPageSection {
 }
 
-.controls button{
+#heading {
+	/*display:inline;*/
+	/*border: 2px dashed black;*/
+	/*display:flex;*/
+	/*margin-bottom: 0;*/
+}
+
+#recordMessage {
+	border: 2px dashed black;
+	max-width: 20%;
+	padding: 1% 4%;
+	margin: 2% 0 -11% 2%;
+	/*border-radius: 20px;*/
 	float: left;
-	height: 45px;
-	width:45px;
-	border: 0;
-	background-color: Transparent;
-    background-repeat:no-repeat;
-	background-image: url('Assets/style/volume.png');
-	background-size: 45px auto;
-	margin:0px;
-	padding:0;
 
 }
 
-.controls button:hover, button:focus{
-	background-image: url('Assets/style/mute.png');
+#recordingStatus {
+	text-align: center;
 }
 
-.slider {
-  -webkit-appearance: none;
-  margin-top:15px;
-  width: 70%;
-  height: 15px;
-  background: rgba(255,255,255,0.4);
-  outline: none;
-  margin-left: 10px;
+#startRecordButton {
+	text-align: center;
+	margin-left: 40%;
+}
+
+#startRecordSection {
+	text-align: center;
+}
+
+
+#title {
+	font-size: 68px;
+	/*margin-top: 2%;*/
+	/*margin-bottom: 2%;*/
+	text-align: center;
+	font-family: "GT-Sectra-Fine-Trial-Regular";
+	/*border: 2px dashed black;*/
+}
+
+
+#liveStreamControls {
+	text-align: right;
+	max-width: 20%;
+	padding: .5%;
+	margin-right: 2%;
+	margin-top: -9%;
+	float: right;
+	/*border: 2px dashed black;*/
+	/*margin-right: 2%;*/
+/*	margin-top: -7%;*/
+}
+
+#zipcodeSearchBox {
+	text-align: center;
+	margin: 16% 0 22%;
+}
+
+#text-box {
+	font-size: 1em;
+	background-color: #00000020;
+	border: 1px solid grey;
+	padding: 1.5%;
+	/*border-radius: 10px;*/
+}
+
+#submit {
+	font-size: 1em;
+	background-color: #00000020;
+	border: 1px solid grey;
+	padding: 1.5%;
+	/*border-radius: 10px;*/
+	margin-left: .5%;
+}
+
+#lowerNavBar {
+	display:inline;
+	text-align: center;
+}
+
+#archiveSection {
+	margin-top: 5%;
+}
+
+#archive {
+	margin: 10% 10% 5% 10%;
+	padding-top: 4%;
+	display: grid;
+  	grid-template-columns: auto auto auto;
+}
+
+#top-bar {
+	width: 80%;
+	margin-top: 0;
+	border-color: black;
+}
+
+#archive-file {
+	padding: 12%;
+	border-right: solid black 2px;
+	margin: 0;
+	text-align: left;
+}
+
+#grid-id {
+	width: 100%;
+	margin-top: 8%;
+	border-color: black;
+}
+
+#blur {
+	position: absolute;
+	width: 100%;
+	height: 1700px;
+	margin-top: -5%;
+	z-index: -1;
+	backdrop-filter: blur(40px);
+}
+
+/*SPECIFIC TO ABOUT PAGE*/
+
+#aboutParagraph {
+	max-width: 70%;
+	margin: 8% auto;
 
 }
 
-.slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%; 
-  background: rgba(255,255,255,1);
-
+h2 {
+	font-family: "GT-Sectra-Fine-Trial-Regular";
+	font-size: 36px;
+	margin-bottom: 0;
+	margin-top: 5%;
+	text-align: left;
 }
 
-.slider::-moz-range-thumb {
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  background: rgba(255,255,255,1);
-
+p {
+	text-align: justify;
+	line-height: 1.6;
+	margin-bottom: 10%;
 }
 
-.recorder button {
-	
 
+ol {
+  margin-top:-20px;
 }
+
+li {
+	  list-style: none;
+	  margin-left:-60px;
+	  margin-top:40px;
+}
+
